@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .alerts {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ffdddd;
+            border-left: 6px solid #f44336;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Monitoring System</h1>
+
+    <div>
+        <h2>Alerts</h2>
+        <div id="alerts-container">
+            <!-- Alerts will be displayed here -->
+        </div>
+    </div>
+
+    <div class="video-container">
+        <h2>Video Feed</h2>
+        <img src="{{ url_for('video_feed') }}" alt="Live Video Feed">
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="{{ url_for('static', filename='js/alerts.js') }}"></script>
+</body>
+</html>
